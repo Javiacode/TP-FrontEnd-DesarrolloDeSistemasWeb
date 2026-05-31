@@ -45,12 +45,39 @@ Se ha reestructurado por completo utilizando una arquitectura basada en componen
 - `src/data/teamData.js`: Arreglo de objetos exportable con la data del equipo.
 - `src/styles/style.css`: Consolidación de todos los estilos modulares del proyecto original adaptados para React.
 
-## Guía visual (Mantenida)
+## Guía de Estilos — "Atmospheric Logic"
 
-La paleta de colores y el modo oscuro siguen intactos bajo la premisa "Atmospheric Logic".
-- Primario: `#006591` (Dorado `#ffeebb` en dark mode).
-- Primario destacado: `#0ea5e9`.
-- Tipografías: `Plus Jakarta Sans` (Títulos), `Inter` (Cuerpo).
+La identidad visual del proyecto se rige por el design system **[Atmospheric Logic](Documentacion/Proyecto-Core/DESIGN.md)**.
+
+### Paleta de Colores
+
+| Rol | Hex | Uso |
+|---|---|---|
+| Primario | `#006591` | Acciones principales, marca |
+| Primario Contenedor | `#0ea5e9` | Acentos, highlights, gradientes |
+| Secundario | `#006c4f` | Estados de éxito |
+| Superficie (canvas) | `#fbf8fc` | Fondo base |
+| Superficie Elevada | `#ffffff` | Tarjetas, elementos interactivos |
+| Texto | `#1b1b1e` | Nunca negro puro (`#000000`) |
+
+**Modo Oscuro:** El primario muta a dorado `#ffeebb` ("Relámpago Dorado").
+
+**Reglas del sistema de diseño:**
+- **"No-Line Rule":** Prohibidos los bordes sólidos de `1px`. La separación se logra con cambios tonales de fondo.
+- **Glassmorphism:** Superficie al 70% de opacidad con `backdrop-blur: 24px` para navbars y modales.
+- **Botones:** Gradiente a 135° (`#006591` → `#0ea5e9`), radio `0.75rem`.
+- **Tarjetas:** Radio `1.5rem`, sin divisores internos.
+
+### Tipografías
+
+| Rol | Fuente | Google Fonts |
+|---|---|---|
+| Títulos / Display | **Plus Jakarta Sans** | [Abrir en Google Fonts](https://fonts.google.com/specimen/Plus+Jakarta+Sans) |
+| Cuerpo / Labels | **Inter** | [Abrir en Google Fonts](https://fonts.google.com/specimen/Inter) |
+
+### Iconografía
+
+- **[Material Symbols Outlined](https://fonts.google.com/icons)** — íconos vectoriales (peso `300`, tamaño `24px`) servidos desde Google Fonts.
 
 ## Lógica Refactorizada (Hooks)
 
@@ -66,13 +93,15 @@ Durante esta migración se utilizó un agente autónomo de IA integrado (Antigra
 - Extraer los datos textuales estáticos hacia un modelo JSON exportable (`teamData.js`).
 - Portar y consolidar la modularización CSS hacia un entorno de Single Page Application.
 
-## Documentación complementaria original
+## Documentación Complementaria
 
-La documentación conceptual de UX/UI, la arquitectura CSS y las minutas iniciales del TP1 siguen estando disponibles como referencia:
-- [Inicio de documentación](../TP-FrontEnd-DesarrolloDeSistemasWeb/Documentacion/Index-Principal.md)
-- [Consigna TP1](../TP-FrontEnd-DesarrolloDeSistemasWeb/Documentacion/Consigna%20TP1%20-%20Markdown.md)
-- [Arquitectura Teórica](../TP-FrontEnd-DesarrolloDeSistemasWeb/Documentacion/Proyecto-Core/Arquitectura.md)
-- [Estilo visual](../TP-FrontEnd-DesarrolloDeSistemasWeb/Documentacion/Proyecto-Core/Estilo-Visual.md)
+- [Repositorio TP1 — HTML/CSS/JS (versión original)](https://github.com/EduMMorenolp/TP-FrontEnd-DesarrolloDeSistemasWeb)
+- [Consigna TP1](Documentacion/Proyecto-Core/Consigna%20TP1.md)
+- [Consigna TP2](Documentacion/Proyecto-Core/Consigna%20TP2.md)
+- [Arquitectura del Proyecto](Documentacion/Proyecto-Core/Arquitectura.md)
+- [Design System — Atmospheric Logic](Documentacion/Proyecto-Core/DESIGN.md)
+- [Bitácora del Equipo](Documentacion/Bitacora/Bitacora/Index-Bitacora.md)
+- [Bitácora de IA](Documentacion/Bitacora/BitacoraIA/Index-BitacoraIA.md)
 
 ## Galería de Vistas
 
